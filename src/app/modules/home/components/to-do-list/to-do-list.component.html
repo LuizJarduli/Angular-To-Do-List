@@ -1,1 +1,9 @@
-<p>to-do-list works!</p>
+<section [ngClass]="{ 'loading': !taskList.length }">
+    <ul *ngIf="taskList.length">
+        <li *ngFor="let item of taskList; let indexNumber = index;">
+            <app-checkbox [(props)]="taskList[indexNumber]" [index]="indexNumber" (onSelectedIndex)="deleteItemTaskList($event)" (onKeyUp)="validationInput($event)"></app-checkbox>
+        </li>
+    </ul>
+</section>
+<app-to-do-input-add-itens (emmitItem)="setEmmitTaskList($event)"></app-to-do-input-add-itens>
+<app-to-do-button-delete-all *ngIf="taskList.length" (click)="deleteAllTaskList()"></app-to-do-button-delete-all>
