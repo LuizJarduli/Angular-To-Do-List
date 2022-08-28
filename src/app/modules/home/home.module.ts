@@ -9,6 +9,8 @@ import { ToDoListComponent } from './components/to-do-list/to-do-list.component'
 
 /** Pages */
 import { HomeComponent } from './pages/home/home.component';
+import { CheckboxComponent } from './pages/checkbox/checkbox.component';
+import { FormsModule } from '@angular/forms';
 
 
 
@@ -18,10 +20,12 @@ import { HomeComponent } from './pages/home/home.component';
     ToDoButtonDeleteAllComponent,
     ToDoInputAddItensComponent,
     ToDoListComponent,
-    HomeComponent
+    HomeComponent,
+    CheckboxComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ]
 })
 export class HomeModule { }
