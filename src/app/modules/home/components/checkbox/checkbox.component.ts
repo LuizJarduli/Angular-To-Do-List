@@ -1,4 +1,4 @@
-import { TaskList } from './../../model/task-list';
+import { TaskList } from '../../model/task-list';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
