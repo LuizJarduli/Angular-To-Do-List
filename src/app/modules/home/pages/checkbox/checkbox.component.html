@@ -1,0 +1,6 @@
+<input type="checkbox" [(ngModel)]="props.checked">
+<input type="text" [(ngModel)]="props.name" [ngClass]="{'checked': props.checked}" (keyup)="keyUpOnInputText(props.name, index)">
+
+<button *ngIf="!readonly" (click)="emmitSelectedIndex()">
+    <img src="assets/icons/icon-trash.svg" alt="Limpar registro">
+</button>
