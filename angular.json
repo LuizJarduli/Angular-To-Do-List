@@ -102,7 +102,12 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "baseHref": "https://luizjarduli.github.io/Angular-To-Do-List/",
+            "name": "App Todo",
+            "email": "luizjarduli@gmail.com"
+          }
         }
       }
     }
